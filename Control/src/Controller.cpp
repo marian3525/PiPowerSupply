@@ -14,7 +14,7 @@ Controller::Controller()
     IOinit();
     SPIinit();
 
-    // create a pipe to send data to the send data to the UI
+    // create a pipe to send data to the UI
     mkfifo(constants::FIFO_NAME, 0666);
     descriptor = open(constants::FIFO_NAME, O_WRONLY);
 }
