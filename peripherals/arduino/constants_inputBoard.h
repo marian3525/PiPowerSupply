@@ -16,23 +16,24 @@ namespace pin {
 	
 	//DIGITAL IN - INTERRUPTS
 	//should be interrupt	(at least one pin per Encoder)
-	const uint8_t ENCODER_VOLTAGE_A_P1 = 2;             //
-	const uint8_t ENCODER_VOLTAGE_A_P2 = 4;             //
+	const uint8_t ENCODER_VOLTAGE_A_P1 = 0;             //
+	const uint8_t ENCODER_VOLTAGE_A_P2 = 1;             //
 	//should be interrupt
-	const uint8_t ENCODER_CURRENT_A_P1 = 0;             //
-	const uint8_t ENCODER_CURRENT_A_P2 = 0;             //
+	const uint8_t ENCODER_CURRENT_A_P1 = 2;             //
+	const uint8_t ENCODER_CURRENT_A_P2 = 3;             //
 	//should be interrupt
-	const uint8_t ENCODER_VOLTAGE_B_P1 = 0;             //
-	const uint8_t ENCODER_VOLTAGE_B_P2 = 0;             //
+	const uint8_t ENCODER_VOLTAGE_B_P1 = 4;             //
+	const uint8_t ENCODER_VOLTAGE_B_P2 = 5;             //
 	//should be interrupt
-	const uint8_t ENCODER_CURRENT_B_P1 = 0;             //
-	const uint8_t ENCODER_CURRENT_B_P2 = 0;             //DELEGA
+	const uint8_t ENCODER_CURRENT_B_P1 = 6;             //
+	const uint8_t ENCODER_CURRENT_B_P2 = 7;             //DELEGA
 	
-	const uint8_t MODE = 0;
-	
+	const uint8_t CURRENT_MODE = 8;                    
+
 	//PREDEFINED MISO, MOSI, SCLK
-  const uint8_t SS = 10;
-	const uint8_t MOSI = 11;
-	const uint8_t MISO = 12;
-	const uint8_t CLK = 13;
+	const uint8_t MOSI = 10;
+	const uint8_t MISO = 11;
+	const uint8_t CLK = 12;
+	const uint8_t SS = 13;
+
 }

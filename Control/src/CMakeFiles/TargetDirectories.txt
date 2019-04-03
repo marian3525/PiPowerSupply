@@ -1,0 +1,3 @@
+/home/marian/Documents/dev/Pi/PiSupply/Control&Interface/Control/src/CMakeFiles/rebuild_cache.dir
+/home/marian/Documents/dev/Pi/PiSupply/Control&Interface/Control/src/CMakeFiles/PSUController.dir
+/home/marian/Documents/dev/Pi/PiSupply/Control&Interface/Control/src/CMakeFiles/edit_cache.dir

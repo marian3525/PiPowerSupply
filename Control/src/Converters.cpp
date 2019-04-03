@@ -7,20 +7,19 @@ Converters::Converters() {
 uint16_t Converters::read(Channel fromChannel) {
     switch(fromChannel) {
 
-    case Channel::voltageA:
-    return adc.read(0);
+        case Channel::voltageA:
+        return adc.read(0);
 
-    case Channel::currentA:
-    return adc.read(1);
+        case Channel::currentA:
+        return adc.read(1);
 
-    case Channel::voltageB:
-    return adc.read(2);
+        case Channel::voltageB:
+        return adc.read(2);
 
-    case Channel::currentB:
-    return adc.read(3);
-    default:
-        return 0;
+        case Channel::currentB:
+        return adc.read(3);
     }
+    return 0;
 }
 
 void Converters::write(Channel toChannel, uint16_t value) {

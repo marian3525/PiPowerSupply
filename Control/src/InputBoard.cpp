@@ -1,6 +1,13 @@
-#include "InputBoard.hpp"
 #include <cinttypes>
-#include "wiringPiSPI.h"
+#include <wiringPiSPI.h>
+#include <wiringPi.h>
+#include <numeric>
+
+#include "InputBoard.hpp"
+#include "pin.hpp"
+
+using namespace std;
+using namespace pin;
 
 InputBoard::InputBoard()
 {
@@ -28,10 +35,20 @@ InputBoard::InputBoard()
 
 InputStates InputBoard::readStateFromInputBoard() {
     const uint8_t bufferSize = 12;
-    auto buffer = new uint8_t[bufferSize];
-#if RUNNING_ON_RASPBIAN == 1
-    wiringPiSPIDataRW(0, buffer, bufferSize);
-#endif
+    vector<uint8_t> buffer = vector<uint8_t>(bufferSize);
+    uint8_t checksum = 0;
+
+    // receive data from the input board and check its integrity. The last byte is the checksum
+    do {
+        digitalWrite(pin::CS_INPUT_BOARD, LOW);     // select the input board from the SPI bus
+        wiringPiSPIDataRW(0, buffer.data(), bufferSize);
+		digitalWrite(pin::CS_INPUT_BOARD, HIGH);
+		
+		// check if the received data is valid
+        checksum = accumulate(buffer.begin(), buffer.end(), static_cast<uint8_t>(0));
+        checksum -= buffer.back();
+    }
+    while(checksum != buffer.back());
 
     // extract the data
     uint8_t encAV, encAA, encBV, encBA, up, down, left, right, select, currentMode;
@@ -55,7 +72,6 @@ InputStates InputBoard::readStateFromInputBoard() {
     select = buffer[11];
     currentMode = buffer[12];
 
-    delete[] buffer;
     return InputStates{{encAV, encAA, encBV, encBA},
                        {{ButtonName::up, up}, {ButtonName::down, down}, {ButtonName::left, left},
                         {ButtonName::right, right}, {ButtonName::select, select},

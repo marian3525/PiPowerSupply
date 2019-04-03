@@ -2,6 +2,9 @@
 #include "pin.hpp"
 #include "constants.hpp"
 
+/**
+ * @brief Controller::Controller Creates a controller and opens (RW) a named pipe to talk to the UI
+ */
 Controller::Controller()
 {
     // prevent process memory swapping
@@ -16,13 +19,18 @@ Controller::Controller()
 
     // create a pipe to send data to the UI
     mkfifo(constants::FIFO_NAME, 0666);
-    descriptor = open(constants::FIFO_NAME, O_WRONLY);
+    descriptorW = open(constants::FIFO_NAME, O_WRONLY);
+    descriptorR = open(constants::FIFO_NAME, O_RDONLY);
 }
 
 Controller::~Controller() {
-    close(descriptor);
+    close(descriptorW);
+    close(descriptorR);
 }
 
+/**
+ * @brief Controller::start Must be called to start running (read and write data)
+ */
 void Controller::start() {
     bool powered=false;
     std::cout<<"waiting for power\n";
@@ -47,13 +55,12 @@ void Controller::start() {
     }
 }
 
+/**
+ * @brief Controller::IOinit Configure the IO of the Pi
+ */
 void Controller::IOinit() {
-    /**
-    Configure IO
-    */
     // raspbian specific
 #if RUNNING_ON_RASPBIAN == 1
-    wiringPiSetup();
     // SPI CS pins for the devices on the bus
     pinMode(pin::CS_PIN_ADC, OUTPUT);
     pinMode(pin::CS_PIN_DAC_A, OUTPUT);
@@ -67,6 +74,9 @@ void Controller::IOinit() {
 #endif
 }
 
+/**
+ * @brief Controller::SPIinit Start SPI on port 0 at SPI_FREQ Hz
+ */
 void Controller::SPIinit() {
     // SPI library init
 #if RUNNING_ON_RASPBIAN == 1
@@ -78,6 +88,10 @@ void Controller::SPIinit() {
 #endif
 }
 
+/**
+ * @brief Controller::readChannelStatesFromADCs Read digital values from the 2 channels, each with volts and amps
+ * @return
+ */
 pair<ChannelState, ChannelState> Controller::readChannelStatesFromADCs() {
 
     uint16_t AV, AA, BV, BA;
@@ -102,37 +116,13 @@ void Controller::writeStatesToDACs(pair<ChannelState, ChannelState> outState) {
     converter.write(Channel::currentB, outState.second.VAvalues.current);
 }
 
-void Controller::syncWithHardware() {
-    preUpdate();
-    update();
-    postUpdate();
-}
-
-void Controller::syncWithUI() {
-    /**
-     * Send uiBuffer through the FIFO to the ui
-     */
-    //uint16_t totalSize = sizeof(uiBuffer);
-    uint16_t sentSize = 0;
-
-    while(sentSize < uiBufferSize) {
-        // send chucks until complete
-        sentSize += write(descriptor, uiBuffer, uiBufferSize);
-    }
-}
-
 /**
- * @brief Controller::preUpdate: read from the input board data and ADCs
+ * @brief Controller::syncWithHardware Does most of the work to keep the knobs in sync with the configuration
+ *
  */
-void Controller::preUpdate() {
+void Controller::syncWithHardware() {
     auto inputStates = inputBoard.readStateFromInputBoard();
     auto channelStates = readChannelStatesFromADCs();
-}
-
-/**
- * @brief Controller::update prepare the data read by the preUpdate to be written by postUpdate
- */
-void Controller::update() {
 
     VAValues freshA{0, 0}, freshB{0, 0};
 
@@ -141,14 +131,29 @@ void Controller::update() {
 
     freshB.voltage = converter.read(Channel::voltageB);
     freshB.current = converter.read(Channel::currentB);
-}
 
-/**
- * @brief Controller::postUpdate: Write to the DACs and output board
- */
-void Controller::postUpdate() {
     writeStatesToDACs(channelStates);
     outputBoard.writeStateToOutputBoard(outputStates);
+}
+/**
+ * @brief Controller::syncWithUI Write all the required data to the UI
+ */
+void Controller::syncWithUI() {
+    /**
+     * Send uiBuffer through the FIFO to the ui
+     */
+    uint16_t sentSize = 0;
+
+    uint8_t receivedSize = 0;
+
+    while(sentSize < uiSendBufferSize) {
+        // send chucks until complete
+        sentSize += write(descriptorW, uiSendBuffer, uiSendBufferSize);
+    }
+
+    while(receivedSize < uiReceiveBufferSize) {
+        receivedSize += read(descriptorR, uiReceiveBuffer, uiReceiveBufferSize);
+    }
 }
 
 /**
