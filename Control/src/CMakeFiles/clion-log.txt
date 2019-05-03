@@ -1,0 +1,4 @@
+/usr/bin/cmake -DCMAKE_BUILD_TYPE= -G "CodeBlocks - Unix Makefiles" /home/marian/Documents/dev/Pi/PiSupply/Control&Interface/Control/src
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/marian/Documents/dev/Pi/PiSupply/Control&Interface/Control/src

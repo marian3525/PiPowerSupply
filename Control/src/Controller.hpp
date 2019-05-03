@@ -13,9 +13,11 @@
 #include <unistd.h>
 #include <wiringPi.h>
 #include <wiringPiSPI.h>
+
 #include "Converters.hpp"
 #include "InputBoard.hpp"
 #include "OutputBoard.hpp"
+
 using namespace std;
 
 // tmp store from/to ADC/DAC
@@ -53,9 +55,7 @@ private:
     pair<VAValues, VAValues> addEncoderDeltaToVA() const;
     EncoderState getEncoderDeltas() const;
 
-    void preUpdate();
-    void update();
-    void postUpdate();
+    // misc. functionality, battery charger/discharger mode, programmable output (vs time)
 
     Converters converter{};
     InputBoard inputBoard{};
@@ -74,11 +74,11 @@ private:
 
     // IPC comms
     // file descriptor for the FIFO
-    int descriptor;
-    const uint16_t uiBufferSize = 100;
-    uint8_t* uiBuffer = new uint8_t[uiBufferSize];
+    int descriptorR;
+    const uint16_t uiReceiveBufferSize = 100;
+    uint8_t* uiReceiveBuffer = new uint8_t[uiReceiveBufferSize];
 
-    // SPI simulator
-    SPISlaveSimulator ss;
-
+    int descriptorW;
+    const uint16_t uiSendBufferSize = 100;
+    uint8_t* uiSendBuffer = new uint8_t[uiSendBufferSize];
 };
