@@ -23,8 +23,14 @@ CMakeFiles/PSUController.dir/InputBoard.cpp.o: InputBoard.cpp
 CMakeFiles/PSUController.dir/InputBoard.cpp.o: InputBoard.hpp
 CMakeFiles/PSUController.dir/InputBoard.cpp.o: pin.hpp
 
+CMakeFiles/PSUController.dir/Logger.cpp.o: Controller.hpp
+CMakeFiles/PSUController.dir/Logger.cpp.o: Converters.hpp
+CMakeFiles/PSUController.dir/Logger.cpp.o: InputBoard.hpp
 CMakeFiles/PSUController.dir/Logger.cpp.o: Logger.cpp
 CMakeFiles/PSUController.dir/Logger.cpp.o: Logger.hpp
+CMakeFiles/PSUController.dir/Logger.cpp.o: MCP3204.hpp
+CMakeFiles/PSUController.dir/Logger.cpp.o: MCP4922.hpp
+CMakeFiles/PSUController.dir/Logger.cpp.o: OutputBoard.hpp
 
 CMakeFiles/PSUController.dir/MCP3204.cpp.o: MCP3204.cpp
 CMakeFiles/PSUController.dir/MCP3204.cpp.o: MCP3204.hpp

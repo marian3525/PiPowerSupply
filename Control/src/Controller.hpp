@@ -52,7 +52,7 @@ private:
     void IOinit();
     void SPIinit();
 
-    pair<VAValues, VAValues> addEncoderDeltaToVA() const;
+    pair<VAValues, VAValues> addEncoderDeltaToVA(VAValues A, VAValues B, EncoderState encoderState) const;
     EncoderState getEncoderDeltas() const;
 
     // misc. functionality, battery charger/discharger mode, programmable output (vs time)
@@ -62,8 +62,8 @@ private:
     OutputBoard outputBoard{};
 
     //comms methods
-    pair<ChannelState, ChannelState> readChannelStatesFromADCs();
-    void writeStatesToDACs(pair<ChannelState, ChannelState> outState);
+    pair<VAValues, VAValues> readChannelStatesFromADCs();
+    void writeValuesToDACs(pair<VAValues, VAValues> outValues);
 
     // buffers to store the data received from/to be sent to the periperals
     OutputStates outputStates;

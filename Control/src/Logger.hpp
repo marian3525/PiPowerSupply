@@ -1,10 +1,10 @@
 #include <utility>
 
-#include <utility>
-
 #ifndef LOGGER_HPP
 #define LOGGER_HPP
+#include <utility>
 #include <string>
+#include <thread>
 #include "Controller.hpp"
 
 /**
@@ -16,14 +16,24 @@
 class Logger
 {
 public:
-    Logger(Controller* controller, float Xscale, std::string Xlabel, float Yscale, std::string Ylabel): Xscale{Xscale}, Xlabel{std::move(Xlabel)},
-                                                                            Yscale{Yscale}, Ylabel{std::move(Ylabel)} {};
+    Logger(Controller* controller, float Xscale, std::string Xlabel, float Yscale, std::string Ylabel, std::string name):
+            Xscale{Xscale}, Xlabel{std::move(Xlabel)}, Yscale{Yscale}, Ylabel{std::move(Ylabel)}, name{std::move(name)} {};
+
     void startLog(uint16_t interval);
+    std::string getName() {return name;}
+
+    ~Logger();
 
 private:
     friend class Controller;
     // used to get values directly
     Controller* controller = nullptr;
+
+    //name of the logger, so that the user can pick them by name
+    string name;
+
+    // sampling and timing thread
+    std::thread* worker;
 
     float Xscale = 0;
     std::string Xlabel;

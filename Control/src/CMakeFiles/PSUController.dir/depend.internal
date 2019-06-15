@@ -24,8 +24,14 @@ CMakeFiles/PSUController.dir/InputBoard.cpp.o
  /home/marian/Documents/dev/Pi/PiSupply/Control&Interface/Control/src/InputBoard.hpp
  /home/marian/Documents/dev/Pi/PiSupply/Control&Interface/Control/src/pin.hpp
 CMakeFiles/PSUController.dir/Logger.cpp.o
+ /home/marian/Documents/dev/Pi/PiSupply/Control&Interface/Control/src/Controller.hpp
+ /home/marian/Documents/dev/Pi/PiSupply/Control&Interface/Control/src/Converters.hpp
+ /home/marian/Documents/dev/Pi/PiSupply/Control&Interface/Control/src/InputBoard.hpp
  /home/marian/Documents/dev/Pi/PiSupply/Control&Interface/Control/src/Logger.cpp
  /home/marian/Documents/dev/Pi/PiSupply/Control&Interface/Control/src/Logger.hpp
+ /home/marian/Documents/dev/Pi/PiSupply/Control&Interface/Control/src/MCP3204.hpp
+ /home/marian/Documents/dev/Pi/PiSupply/Control&Interface/Control/src/MCP4922.hpp
+ /home/marian/Documents/dev/Pi/PiSupply/Control&Interface/Control/src/OutputBoard.hpp
 CMakeFiles/PSUController.dir/MCP3204.cpp.o
  /home/marian/Documents/dev/Pi/PiSupply/Control&Interface/Control/src/MCP3204.cpp
  /home/marian/Documents/dev/Pi/PiSupply/Control&Interface/Control/src/MCP3204.hpp

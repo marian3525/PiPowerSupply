@@ -32,7 +32,7 @@ uint16_t MCP3204::read(uint8_t channel) {
     value |= (spiBuffer[1] & 0x0F) << 8;     // extract the 4 MSB from the buffer and put t$
     value |= spiBuffer[2];      // place the 8 LSB
  
-    return value & 0x0FFF;
+    return static_cast<uint16_t>(value & 0x0FFF);
 } 
  
  

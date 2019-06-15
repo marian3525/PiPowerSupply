@@ -44,7 +44,7 @@ InputStates InputBoard::readStateFromInputBoard() {
         wiringPiSPIDataRW(0, buffer.data(), bufferSize);
 		digitalWrite(pin::CS_INPUT_BOARD, HIGH);
 		
-		// check if the received data is valid
+		// check if the received data is valid. The checksum is the sum of the first n-1 bytes, stored as byte (it will overflow)
         checksum = accumulate(buffer.begin(), buffer.end(), static_cast<uint8_t>(0));
         checksum -= buffer.back();
     }

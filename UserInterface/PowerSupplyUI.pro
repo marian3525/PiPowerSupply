@@ -27,20 +27,14 @@ CONFIG += c++11
 SOURCES += \
         main.cpp \
     Controller.cpp \
-    SplashScreen.cpp \
-    PowerSupplyScreen.cpp \
-    FrequencyGenerator.cpp
+    MainWindow.cpp
 
 HEADERS += \
     Controller.hpp \
-    SplashScreen.h \
-    PowerSupplyScreen.h \
-    FrequencyGenerator.h
+    MainWindow.hpp
 
 FORMS += \
-    SplashScreen.ui \
-    PowerSupplyScreen.ui \
-    FrequencyGenerator.ui
+    MainWindow.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

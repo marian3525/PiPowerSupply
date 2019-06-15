@@ -9,9 +9,7 @@ void MCP4922::write(uint8_t channel, uint16_t value) {
       (channel) (buffered) (gain) (shutdown) D11 ... D0
       */
     uint8_t builder = 0;    // aux variable in which the 2 bytes will be built
-    uint8_t buffered = 0;
-    uint8_t gain = 1;
-    uint8_t shutdown = 1;
+    // default: gain: 1, shutdown: 1,buffered: 0
     uint8_t spiBuffer[2];
 
 	// config bits

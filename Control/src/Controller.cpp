@@ -48,6 +48,7 @@ void Controller::start() {
 	std::cout<<"Looping\n";
         syncWithHardware();
         syncWithUI();
+
 #if RUNNING_ON_RASPBIAN ==1
         powered = digitalRead(pin::PWR_GOOD);
 #endif
@@ -92,7 +93,7 @@ void Controller::SPIinit() {
  * @brief Controller::readChannelStatesFromADCs Read digital values from the 2 channels, each with volts and amps
  * @return
  */
-pair<ChannelState, ChannelState> Controller::readChannelStatesFromADCs() {
+pair<VAValues, VAValues> Controller::readChannelStatesFromADCs() {
 
     uint16_t AV, AA, BV, BA;
     AV = converter.read(Channel::voltageA);
@@ -101,19 +102,19 @@ pair<ChannelState, ChannelState> Controller::readChannelStatesFromADCs() {
     BV = converter.read(Channel::voltageB);
     BA = converter.read(Channel::currentB);
 
-    return {{{AV, AA}, 0}, {{BV, BA}, 0}};
+    return {{AV, AA}, {BV, BA}};
 }
 
 /**
  * @brief Controller::writeStatesToDACs: write the values stored in the parameter to the DACs for the 2 channels
  * @param outState: stores the values to be written
  */
-void Controller::writeStatesToDACs(pair<ChannelState, ChannelState> outState) {
-    converter.write(Channel::voltageA, outState.first.VAvalues.voltage);
-    converter.write(Channel::currentA, outState.first.VAvalues.current);
+void Controller::writeValuesToDACs(pair<VAValues, VAValues> outValues) {
+    converter.write(Channel::voltageA, outValues.first.voltage);
+    converter.write(Channel::currentA, outValues.first.current);
 
-    converter.write(Channel::voltageB, outState.second.VAvalues.voltage);
-    converter.write(Channel::currentB, outState.second.VAvalues.current);
+    converter.write(Channel::voltageB, outValues.second.voltage);
+    converter.write(Channel::currentB, outValues.second.current);
 }
 
 /**
@@ -121,19 +122,20 @@ void Controller::writeStatesToDACs(pair<ChannelState, ChannelState> outState) {
  *
  */
 void Controller::syncWithHardware() {
+    // button and encoder states
     auto inputStates = inputBoard.readStateFromInputBoard();
-    auto channelStates = readChannelStatesFromADCs();
 
-    VAValues freshA{0, 0}, freshB{0, 0};
+    // digital values of the voltage and current for both channels
+    auto channelValues = readChannelStatesFromADCs();
 
-    freshA.voltage = converter.read(Channel::voltageA);
-    freshA.current = converter.read(Channel::currentA);
+    // update values by adding the input from the encoders to the current values
+    auto updated = addEncoderDeltaToVA(channelValues.first, channelValues.second, inputStates.encoderState);
 
-    freshB.voltage = converter.read(Channel::voltageB);
-    freshB.current = converter.read(Channel::currentB);
+    // and write the updated values back to the hardware
+    writeValuesToDACs(updated);
 
-    writeStatesToDACs(channelStates);
-    outputBoard.writeStateToOutputBoard(outputStates);
+    // respond to the updates
+    // outputBoard.writeStateToOutputBoard(outputStates);
 }
 /**
  * @brief Controller::syncWithUI Write all the required data to the UI
@@ -160,18 +162,16 @@ void Controller::syncWithUI() {
  * @brief Controller::addEncoderDeltaToVA: add the number of pulses from the encoders to the prev. value read
  * @return the updated values computed
  */
-pair<VAValues, VAValues> Controller::addEncoderDeltaToVA() const {
-    VAValues newValuesA{0, 0};
-    VAValues newValuesB{0, 0};
+pair<VAValues, VAValues> Controller::addEncoderDeltaToVA(VAValues A, VAValues B, EncoderState encoderState) const {
 
     // add the number of encoder pulses registered in the prev. cycle to the current values
-    newValuesA.voltage += encoderState.encoderAV;
-    newValuesA.current += encoderState.encoderAA;
+    A.voltage += encoderState.encoderAV;
+    A.current += encoderState.encoderAA;
 
-    newValuesB.voltage += encoderState.encoderBV;
-    newValuesB.current += encoderState.encoderBA;
+    B.voltage += encoderState.encoderBV;
+    B.current += encoderState.encoderBA;
 
-    return {newValuesA, newValuesB};
+    return {A, B};
 }
 
 pair<ChannelState, ChannelState> Controller::getChannelsState() const {

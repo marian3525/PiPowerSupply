@@ -6,12 +6,6 @@
 
 #IncludeRegexTransform: 
 
-/home/marian/Documents/dev/Pi/PiSupply/Control&Interface/Control/src/BatteryUtils.cpp
-BatteryUtils.hpp
-/home/marian/Documents/dev/Pi/PiSupply/Control&Interface/Control/src/BatteryUtils.hpp
-
-/home/marian/Documents/dev/Pi/PiSupply/Control&Interface/Control/src/BatteryUtils.hpp
-
 /home/marian/Documents/dev/Pi/PiSupply/Control&Interface/Control/src/Controller.cpp
 Controller.hpp
 /home/marian/Documents/dev/Pi/PiSupply/Control&Interface/Control/src/Controller.hpp
@@ -54,11 +48,29 @@ InputBoard.hpp
 OutputBoard.hpp
 /home/marian/Documents/dev/Pi/PiSupply/Control&Interface/Control/src/OutputBoard.hpp
 
+/home/marian/Documents/dev/Pi/PiSupply/Control&Interface/Control/src/Converters.cpp
+Converters.hpp
+/home/marian/Documents/dev/Pi/PiSupply/Control&Interface/Control/src/Converters.hpp
+
 /home/marian/Documents/dev/Pi/PiSupply/Control&Interface/Control/src/Converters.hpp
 MCP3204.hpp
 /home/marian/Documents/dev/Pi/PiSupply/Control&Interface/Control/src/MCP3204.hpp
 MCP4922.hpp
 /home/marian/Documents/dev/Pi/PiSupply/Control&Interface/Control/src/MCP4922.hpp
+
+/home/marian/Documents/dev/Pi/PiSupply/Control&Interface/Control/src/InputBoard.cpp
+cinttypes
+-
+wiringPiSPI.h
+-
+wiringPi.h
+-
+numeric
+-
+InputBoard.hpp
+/home/marian/Documents/dev/Pi/PiSupply/Control&Interface/Control/src/InputBoard.hpp
+pin.hpp
+/home/marian/Documents/dev/Pi/PiSupply/Control&Interface/Control/src/pin.hpp
 
 /home/marian/Documents/dev/Pi/PiSupply/Control&Interface/Control/src/InputBoard.hpp
 vector
@@ -69,6 +81,8 @@ cinttypes
 /home/marian/Documents/dev/Pi/PiSupply/Control&Interface/Control/src/Logger.cpp
 Logger.hpp
 /home/marian/Documents/dev/Pi/PiSupply/Control&Interface/Control/src/Logger.hpp
+thread
+-
 
 /home/marian/Documents/dev/Pi/PiSupply/Control&Interface/Control/src/Logger.hpp
 utility
@@ -77,10 +91,30 @@ utility
 -
 string
 -
+thread
+-
+Controller.hpp
+/home/marian/Documents/dev/Pi/PiSupply/Control&Interface/Control/src/Controller.hpp
+
+/home/marian/Documents/dev/Pi/PiSupply/Control&Interface/Control/src/MCP3204.cpp
+wiringPiSPI.h
+-
+wiringPi.h
+-
+MCP3204.hpp
+/home/marian/Documents/dev/Pi/PiSupply/Control&Interface/Control/src/MCP3204.hpp
 
 /home/marian/Documents/dev/Pi/PiSupply/Control&Interface/Control/src/MCP3204.hpp
 cinttypes
 -
+
+/home/marian/Documents/dev/Pi/PiSupply/Control&Interface/Control/src/MCP4922.cpp
+wiringPiSPI.h
+-
+wiringPi.h
+-
+MCP4922.hpp
+/home/marian/Documents/dev/Pi/PiSupply/Control&Interface/Control/src/MCP4922.hpp
 
 /home/marian/Documents/dev/Pi/PiSupply/Control&Interface/Control/src/MCP4922.hpp
 cinttypes
@@ -93,6 +127,12 @@ cinttypes
 -
 unistd.h
 -
+
+/home/marian/Documents/dev/Pi/PiSupply/Control&Interface/Control/src/main.cpp
+Controller.hpp
+/home/marian/Documents/dev/Pi/PiSupply/Control&Interface/Control/src/Controller.hpp
+pin.hpp
+/home/marian/Documents/dev/Pi/PiSupply/Control&Interface/Control/src/pin.hpp
 
 /home/marian/Documents/dev/Pi/PiSupply/Control&Interface/Control/src/pin.hpp
 cinttypes
