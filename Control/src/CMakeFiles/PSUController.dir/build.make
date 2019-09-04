@@ -34,10 +34,10 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /usr/bin/cmake
+CMAKE_COMMAND = /home/marian/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/192.5728.100/bin/cmake/linux/bin/cmake
 
 # The command to remove a file.
-RM = /usr/bin/cmake -E remove -f
+RM = /home/marian/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/192.5728.100/bin/cmake/linux/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
@@ -70,167 +70,152 @@ CMakeFiles/PSUController.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PSUController.dir/main.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/marian/Documents/dev/Pi/PiSupply/Control&Interface/Control/src/main.cpp" -o CMakeFiles/PSUController.dir/main.cpp.s
 
-CMakeFiles/PSUController.dir/MCP4922.cpp.o: CMakeFiles/PSUController.dir/flags.make
-CMakeFiles/PSUController.dir/MCP4922.cpp.o: MCP4922.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/marian/Documents/dev/Pi/PiSupply/Control&Interface/Control/src/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/PSUController.dir/MCP4922.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PSUController.dir/MCP4922.cpp.o -c "/home/marian/Documents/dev/Pi/PiSupply/Control&Interface/Control/src/MCP4922.cpp"
+CMakeFiles/PSUController.dir/utils/MCP4922.cpp.o: CMakeFiles/PSUController.dir/flags.make
+CMakeFiles/PSUController.dir/utils/MCP4922.cpp.o: utils/MCP4922.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/marian/Documents/dev/Pi/PiSupply/Control&Interface/Control/src/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/PSUController.dir/utils/MCP4922.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PSUController.dir/utils/MCP4922.cpp.o -c "/home/marian/Documents/dev/Pi/PiSupply/Control&Interface/Control/src/utils/MCP4922.cpp"
 
-CMakeFiles/PSUController.dir/MCP4922.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PSUController.dir/MCP4922.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/marian/Documents/dev/Pi/PiSupply/Control&Interface/Control/src/MCP4922.cpp" > CMakeFiles/PSUController.dir/MCP4922.cpp.i
+CMakeFiles/PSUController.dir/utils/MCP4922.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PSUController.dir/utils/MCP4922.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/marian/Documents/dev/Pi/PiSupply/Control&Interface/Control/src/utils/MCP4922.cpp" > CMakeFiles/PSUController.dir/utils/MCP4922.cpp.i
 
-CMakeFiles/PSUController.dir/MCP4922.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PSUController.dir/MCP4922.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/marian/Documents/dev/Pi/PiSupply/Control&Interface/Control/src/MCP4922.cpp" -o CMakeFiles/PSUController.dir/MCP4922.cpp.s
+CMakeFiles/PSUController.dir/utils/MCP4922.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PSUController.dir/utils/MCP4922.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/marian/Documents/dev/Pi/PiSupply/Control&Interface/Control/src/utils/MCP4922.cpp" -o CMakeFiles/PSUController.dir/utils/MCP4922.cpp.s
 
-CMakeFiles/PSUController.dir/MCP3204.cpp.o: CMakeFiles/PSUController.dir/flags.make
-CMakeFiles/PSUController.dir/MCP3204.cpp.o: MCP3204.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/marian/Documents/dev/Pi/PiSupply/Control&Interface/Control/src/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/PSUController.dir/MCP3204.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PSUController.dir/MCP3204.cpp.o -c "/home/marian/Documents/dev/Pi/PiSupply/Control&Interface/Control/src/MCP3204.cpp"
+CMakeFiles/PSUController.dir/utils/MCP3204.cpp.o: CMakeFiles/PSUController.dir/flags.make
+CMakeFiles/PSUController.dir/utils/MCP3204.cpp.o: utils/MCP3204.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/marian/Documents/dev/Pi/PiSupply/Control&Interface/Control/src/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/PSUController.dir/utils/MCP3204.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PSUController.dir/utils/MCP3204.cpp.o -c "/home/marian/Documents/dev/Pi/PiSupply/Control&Interface/Control/src/utils/MCP3204.cpp"
 
-CMakeFiles/PSUController.dir/MCP3204.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PSUController.dir/MCP3204.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/marian/Documents/dev/Pi/PiSupply/Control&Interface/Control/src/MCP3204.cpp" > CMakeFiles/PSUController.dir/MCP3204.cpp.i
+CMakeFiles/PSUController.dir/utils/MCP3204.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PSUController.dir/utils/MCP3204.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/marian/Documents/dev/Pi/PiSupply/Control&Interface/Control/src/utils/MCP3204.cpp" > CMakeFiles/PSUController.dir/utils/MCP3204.cpp.i
 
-CMakeFiles/PSUController.dir/MCP3204.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PSUController.dir/MCP3204.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/marian/Documents/dev/Pi/PiSupply/Control&Interface/Control/src/MCP3204.cpp" -o CMakeFiles/PSUController.dir/MCP3204.cpp.s
+CMakeFiles/PSUController.dir/utils/MCP3204.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PSUController.dir/utils/MCP3204.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/marian/Documents/dev/Pi/PiSupply/Control&Interface/Control/src/utils/MCP3204.cpp" -o CMakeFiles/PSUController.dir/utils/MCP3204.cpp.s
 
-CMakeFiles/PSUController.dir/Converters.cpp.o: CMakeFiles/PSUController.dir/flags.make
-CMakeFiles/PSUController.dir/Converters.cpp.o: Converters.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/marian/Documents/dev/Pi/PiSupply/Control&Interface/Control/src/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/PSUController.dir/Converters.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PSUController.dir/Converters.cpp.o -c "/home/marian/Documents/dev/Pi/PiSupply/Control&Interface/Control/src/Converters.cpp"
+CMakeFiles/PSUController.dir/io_abstraction/Converters.cpp.o: CMakeFiles/PSUController.dir/flags.make
+CMakeFiles/PSUController.dir/io_abstraction/Converters.cpp.o: io_abstraction/Converters.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/marian/Documents/dev/Pi/PiSupply/Control&Interface/Control/src/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/PSUController.dir/io_abstraction/Converters.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PSUController.dir/io_abstraction/Converters.cpp.o -c "/home/marian/Documents/dev/Pi/PiSupply/Control&Interface/Control/src/io_abstraction/Converters.cpp"
 
-CMakeFiles/PSUController.dir/Converters.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PSUController.dir/Converters.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/marian/Documents/dev/Pi/PiSupply/Control&Interface/Control/src/Converters.cpp" > CMakeFiles/PSUController.dir/Converters.cpp.i
+CMakeFiles/PSUController.dir/io_abstraction/Converters.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PSUController.dir/io_abstraction/Converters.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/marian/Documents/dev/Pi/PiSupply/Control&Interface/Control/src/io_abstraction/Converters.cpp" > CMakeFiles/PSUController.dir/io_abstraction/Converters.cpp.i
 
-CMakeFiles/PSUController.dir/Converters.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PSUController.dir/Converters.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/marian/Documents/dev/Pi/PiSupply/Control&Interface/Control/src/Converters.cpp" -o CMakeFiles/PSUController.dir/Converters.cpp.s
+CMakeFiles/PSUController.dir/io_abstraction/Converters.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PSUController.dir/io_abstraction/Converters.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/marian/Documents/dev/Pi/PiSupply/Control&Interface/Control/src/io_abstraction/Converters.cpp" -o CMakeFiles/PSUController.dir/io_abstraction/Converters.cpp.s
 
-CMakeFiles/PSUController.dir/Controller.cpp.o: CMakeFiles/PSUController.dir/flags.make
-CMakeFiles/PSUController.dir/Controller.cpp.o: Controller.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/marian/Documents/dev/Pi/PiSupply/Control&Interface/Control/src/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/PSUController.dir/Controller.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PSUController.dir/Controller.cpp.o -c "/home/marian/Documents/dev/Pi/PiSupply/Control&Interface/Control/src/Controller.cpp"
+CMakeFiles/PSUController.dir/io_abstraction/PersistentConfiguration.cpp.o: CMakeFiles/PSUController.dir/flags.make
+CMakeFiles/PSUController.dir/io_abstraction/PersistentConfiguration.cpp.o: io_abstraction/PersistentConfiguration.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/marian/Documents/dev/Pi/PiSupply/Control&Interface/Control/src/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/PSUController.dir/io_abstraction/PersistentConfiguration.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PSUController.dir/io_abstraction/PersistentConfiguration.cpp.o -c "/home/marian/Documents/dev/Pi/PiSupply/Control&Interface/Control/src/io_abstraction/PersistentConfiguration.cpp"
 
-CMakeFiles/PSUController.dir/Controller.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PSUController.dir/Controller.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/marian/Documents/dev/Pi/PiSupply/Control&Interface/Control/src/Controller.cpp" > CMakeFiles/PSUController.dir/Controller.cpp.i
+CMakeFiles/PSUController.dir/io_abstraction/PersistentConfiguration.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PSUController.dir/io_abstraction/PersistentConfiguration.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/marian/Documents/dev/Pi/PiSupply/Control&Interface/Control/src/io_abstraction/PersistentConfiguration.cpp" > CMakeFiles/PSUController.dir/io_abstraction/PersistentConfiguration.cpp.i
 
-CMakeFiles/PSUController.dir/Controller.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PSUController.dir/Controller.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/marian/Documents/dev/Pi/PiSupply/Control&Interface/Control/src/Controller.cpp" -o CMakeFiles/PSUController.dir/Controller.cpp.s
+CMakeFiles/PSUController.dir/io_abstraction/PersistentConfiguration.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PSUController.dir/io_abstraction/PersistentConfiguration.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/marian/Documents/dev/Pi/PiSupply/Control&Interface/Control/src/io_abstraction/PersistentConfiguration.cpp" -o CMakeFiles/PSUController.dir/io_abstraction/PersistentConfiguration.cpp.s
 
-CMakeFiles/PSUController.dir/PersistentConfiguration.cpp.o: CMakeFiles/PSUController.dir/flags.make
-CMakeFiles/PSUController.dir/PersistentConfiguration.cpp.o: PersistentConfiguration.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/marian/Documents/dev/Pi/PiSupply/Control&Interface/Control/src/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/PSUController.dir/PersistentConfiguration.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PSUController.dir/PersistentConfiguration.cpp.o -c "/home/marian/Documents/dev/Pi/PiSupply/Control&Interface/Control/src/PersistentConfiguration.cpp"
+CMakeFiles/PSUController.dir/io_abstraction/InputBoard.cpp.o: CMakeFiles/PSUController.dir/flags.make
+CMakeFiles/PSUController.dir/io_abstraction/InputBoard.cpp.o: io_abstraction/InputBoard.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/marian/Documents/dev/Pi/PiSupply/Control&Interface/Control/src/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/PSUController.dir/io_abstraction/InputBoard.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PSUController.dir/io_abstraction/InputBoard.cpp.o -c "/home/marian/Documents/dev/Pi/PiSupply/Control&Interface/Control/src/io_abstraction/InputBoard.cpp"
 
-CMakeFiles/PSUController.dir/PersistentConfiguration.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PSUController.dir/PersistentConfiguration.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/marian/Documents/dev/Pi/PiSupply/Control&Interface/Control/src/PersistentConfiguration.cpp" > CMakeFiles/PSUController.dir/PersistentConfiguration.cpp.i
+CMakeFiles/PSUController.dir/io_abstraction/InputBoard.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PSUController.dir/io_abstraction/InputBoard.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/marian/Documents/dev/Pi/PiSupply/Control&Interface/Control/src/io_abstraction/InputBoard.cpp" > CMakeFiles/PSUController.dir/io_abstraction/InputBoard.cpp.i
 
-CMakeFiles/PSUController.dir/PersistentConfiguration.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PSUController.dir/PersistentConfiguration.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/marian/Documents/dev/Pi/PiSupply/Control&Interface/Control/src/PersistentConfiguration.cpp" -o CMakeFiles/PSUController.dir/PersistentConfiguration.cpp.s
+CMakeFiles/PSUController.dir/io_abstraction/InputBoard.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PSUController.dir/io_abstraction/InputBoard.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/marian/Documents/dev/Pi/PiSupply/Control&Interface/Control/src/io_abstraction/InputBoard.cpp" -o CMakeFiles/PSUController.dir/io_abstraction/InputBoard.cpp.s
 
-CMakeFiles/PSUController.dir/InputBoard.cpp.o: CMakeFiles/PSUController.dir/flags.make
-CMakeFiles/PSUController.dir/InputBoard.cpp.o: InputBoard.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/marian/Documents/dev/Pi/PiSupply/Control&Interface/Control/src/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/PSUController.dir/InputBoard.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PSUController.dir/InputBoard.cpp.o -c "/home/marian/Documents/dev/Pi/PiSupply/Control&Interface/Control/src/InputBoard.cpp"
+CMakeFiles/PSUController.dir/io_abstraction/OutputBoard.cpp.o: CMakeFiles/PSUController.dir/flags.make
+CMakeFiles/PSUController.dir/io_abstraction/OutputBoard.cpp.o: io_abstraction/OutputBoard.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/marian/Documents/dev/Pi/PiSupply/Control&Interface/Control/src/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/PSUController.dir/io_abstraction/OutputBoard.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PSUController.dir/io_abstraction/OutputBoard.cpp.o -c "/home/marian/Documents/dev/Pi/PiSupply/Control&Interface/Control/src/io_abstraction/OutputBoard.cpp"
 
-CMakeFiles/PSUController.dir/InputBoard.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PSUController.dir/InputBoard.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/marian/Documents/dev/Pi/PiSupply/Control&Interface/Control/src/InputBoard.cpp" > CMakeFiles/PSUController.dir/InputBoard.cpp.i
+CMakeFiles/PSUController.dir/io_abstraction/OutputBoard.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PSUController.dir/io_abstraction/OutputBoard.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/marian/Documents/dev/Pi/PiSupply/Control&Interface/Control/src/io_abstraction/OutputBoard.cpp" > CMakeFiles/PSUController.dir/io_abstraction/OutputBoard.cpp.i
 
-CMakeFiles/PSUController.dir/InputBoard.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PSUController.dir/InputBoard.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/marian/Documents/dev/Pi/PiSupply/Control&Interface/Control/src/InputBoard.cpp" -o CMakeFiles/PSUController.dir/InputBoard.cpp.s
+CMakeFiles/PSUController.dir/io_abstraction/OutputBoard.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PSUController.dir/io_abstraction/OutputBoard.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/marian/Documents/dev/Pi/PiSupply/Control&Interface/Control/src/io_abstraction/OutputBoard.cpp" -o CMakeFiles/PSUController.dir/io_abstraction/OutputBoard.cpp.s
 
-CMakeFiles/PSUController.dir/OutputBoard.cpp.o: CMakeFiles/PSUController.dir/flags.make
-CMakeFiles/PSUController.dir/OutputBoard.cpp.o: OutputBoard.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/marian/Documents/dev/Pi/PiSupply/Control&Interface/Control/src/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/PSUController.dir/OutputBoard.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PSUController.dir/OutputBoard.cpp.o -c "/home/marian/Documents/dev/Pi/PiSupply/Control&Interface/Control/src/OutputBoard.cpp"
+CMakeFiles/PSUController.dir/features/BatteryUtils.cpp.o: CMakeFiles/PSUController.dir/flags.make
+CMakeFiles/PSUController.dir/features/BatteryUtils.cpp.o: features/BatteryUtils.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/marian/Documents/dev/Pi/PiSupply/Control&Interface/Control/src/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/PSUController.dir/features/BatteryUtils.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PSUController.dir/features/BatteryUtils.cpp.o -c "/home/marian/Documents/dev/Pi/PiSupply/Control&Interface/Control/src/features/BatteryUtils.cpp"
 
-CMakeFiles/PSUController.dir/OutputBoard.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PSUController.dir/OutputBoard.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/marian/Documents/dev/Pi/PiSupply/Control&Interface/Control/src/OutputBoard.cpp" > CMakeFiles/PSUController.dir/OutputBoard.cpp.i
+CMakeFiles/PSUController.dir/features/BatteryUtils.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PSUController.dir/features/BatteryUtils.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/marian/Documents/dev/Pi/PiSupply/Control&Interface/Control/src/features/BatteryUtils.cpp" > CMakeFiles/PSUController.dir/features/BatteryUtils.cpp.i
 
-CMakeFiles/PSUController.dir/OutputBoard.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PSUController.dir/OutputBoard.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/marian/Documents/dev/Pi/PiSupply/Control&Interface/Control/src/OutputBoard.cpp" -o CMakeFiles/PSUController.dir/OutputBoard.cpp.s
+CMakeFiles/PSUController.dir/features/BatteryUtils.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PSUController.dir/features/BatteryUtils.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/marian/Documents/dev/Pi/PiSupply/Control&Interface/Control/src/features/BatteryUtils.cpp" -o CMakeFiles/PSUController.dir/features/BatteryUtils.cpp.s
 
-CMakeFiles/PSUController.dir/BatteryUtils.cpp.o: CMakeFiles/PSUController.dir/flags.make
-CMakeFiles/PSUController.dir/BatteryUtils.cpp.o: BatteryUtils.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/marian/Documents/dev/Pi/PiSupply/Control&Interface/Control/src/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/PSUController.dir/BatteryUtils.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PSUController.dir/BatteryUtils.cpp.o -c "/home/marian/Documents/dev/Pi/PiSupply/Control&Interface/Control/src/BatteryUtils.cpp"
+CMakeFiles/PSUController.dir/features/Logger.cpp.o: CMakeFiles/PSUController.dir/flags.make
+CMakeFiles/PSUController.dir/features/Logger.cpp.o: features/Logger.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/marian/Documents/dev/Pi/PiSupply/Control&Interface/Control/src/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/PSUController.dir/features/Logger.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PSUController.dir/features/Logger.cpp.o -c "/home/marian/Documents/dev/Pi/PiSupply/Control&Interface/Control/src/features/Logger.cpp"
 
-CMakeFiles/PSUController.dir/BatteryUtils.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PSUController.dir/BatteryUtils.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/marian/Documents/dev/Pi/PiSupply/Control&Interface/Control/src/BatteryUtils.cpp" > CMakeFiles/PSUController.dir/BatteryUtils.cpp.i
+CMakeFiles/PSUController.dir/features/Logger.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PSUController.dir/features/Logger.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/marian/Documents/dev/Pi/PiSupply/Control&Interface/Control/src/features/Logger.cpp" > CMakeFiles/PSUController.dir/features/Logger.cpp.i
 
-CMakeFiles/PSUController.dir/BatteryUtils.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PSUController.dir/BatteryUtils.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/marian/Documents/dev/Pi/PiSupply/Control&Interface/Control/src/BatteryUtils.cpp" -o CMakeFiles/PSUController.dir/BatteryUtils.cpp.s
+CMakeFiles/PSUController.dir/features/Logger.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PSUController.dir/features/Logger.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/marian/Documents/dev/Pi/PiSupply/Control&Interface/Control/src/features/Logger.cpp" -o CMakeFiles/PSUController.dir/features/Logger.cpp.s
 
-CMakeFiles/PSUController.dir/Logger.cpp.o: CMakeFiles/PSUController.dir/flags.make
-CMakeFiles/PSUController.dir/Logger.cpp.o: Logger.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/marian/Documents/dev/Pi/PiSupply/Control&Interface/Control/src/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/PSUController.dir/Logger.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PSUController.dir/Logger.cpp.o -c "/home/marian/Documents/dev/Pi/PiSupply/Control&Interface/Control/src/Logger.cpp"
+CMakeFiles/PSUController.dir/utils/IPCHandler.cpp.o: CMakeFiles/PSUController.dir/flags.make
+CMakeFiles/PSUController.dir/utils/IPCHandler.cpp.o: utils/IPCHandler.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/marian/Documents/dev/Pi/PiSupply/Control&Interface/Control/src/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/PSUController.dir/utils/IPCHandler.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PSUController.dir/utils/IPCHandler.cpp.o -c "/home/marian/Documents/dev/Pi/PiSupply/Control&Interface/Control/src/utils/IPCHandler.cpp"
 
-CMakeFiles/PSUController.dir/Logger.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PSUController.dir/Logger.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/marian/Documents/dev/Pi/PiSupply/Control&Interface/Control/src/Logger.cpp" > CMakeFiles/PSUController.dir/Logger.cpp.i
+CMakeFiles/PSUController.dir/utils/IPCHandler.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PSUController.dir/utils/IPCHandler.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/marian/Documents/dev/Pi/PiSupply/Control&Interface/Control/src/utils/IPCHandler.cpp" > CMakeFiles/PSUController.dir/utils/IPCHandler.cpp.i
 
-CMakeFiles/PSUController.dir/Logger.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PSUController.dir/Logger.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/marian/Documents/dev/Pi/PiSupply/Control&Interface/Control/src/Logger.cpp" -o CMakeFiles/PSUController.dir/Logger.cpp.s
-
-CMakeFiles/PSUController.dir/Tester.cpp.o: CMakeFiles/PSUController.dir/flags.make
-CMakeFiles/PSUController.dir/Tester.cpp.o: Tester.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/marian/Documents/dev/Pi/PiSupply/Control&Interface/Control/src/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/PSUController.dir/Tester.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PSUController.dir/Tester.cpp.o -c "/home/marian/Documents/dev/Pi/PiSupply/Control&Interface/Control/src/Tester.cpp"
-
-CMakeFiles/PSUController.dir/Tester.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PSUController.dir/Tester.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/marian/Documents/dev/Pi/PiSupply/Control&Interface/Control/src/Tester.cpp" > CMakeFiles/PSUController.dir/Tester.cpp.i
-
-CMakeFiles/PSUController.dir/Tester.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PSUController.dir/Tester.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/marian/Documents/dev/Pi/PiSupply/Control&Interface/Control/src/Tester.cpp" -o CMakeFiles/PSUController.dir/Tester.cpp.s
+CMakeFiles/PSUController.dir/utils/IPCHandler.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PSUController.dir/utils/IPCHandler.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/marian/Documents/dev/Pi/PiSupply/Control&Interface/Control/src/utils/IPCHandler.cpp" -o CMakeFiles/PSUController.dir/utils/IPCHandler.cpp.s
 
 # Object files for target PSUController
 PSUController_OBJECTS = \
 "CMakeFiles/PSUController.dir/main.cpp.o" \
-"CMakeFiles/PSUController.dir/MCP4922.cpp.o" \
-"CMakeFiles/PSUController.dir/MCP3204.cpp.o" \
-"CMakeFiles/PSUController.dir/Converters.cpp.o" \
-"CMakeFiles/PSUController.dir/Controller.cpp.o" \
-"CMakeFiles/PSUController.dir/PersistentConfiguration.cpp.o" \
-"CMakeFiles/PSUController.dir/InputBoard.cpp.o" \
-"CMakeFiles/PSUController.dir/OutputBoard.cpp.o" \
-"CMakeFiles/PSUController.dir/BatteryUtils.cpp.o" \
-"CMakeFiles/PSUController.dir/Logger.cpp.o" \
-"CMakeFiles/PSUController.dir/Tester.cpp.o"
+"CMakeFiles/PSUController.dir/utils/MCP4922.cpp.o" \
+"CMakeFiles/PSUController.dir/utils/MCP3204.cpp.o" \
+"CMakeFiles/PSUController.dir/io_abstraction/Converters.cpp.o" \
+"CMakeFiles/PSUController.dir/io_abstraction/PersistentConfiguration.cpp.o" \
+"CMakeFiles/PSUController.dir/io_abstraction/InputBoard.cpp.o" \
+"CMakeFiles/PSUController.dir/io_abstraction/OutputBoard.cpp.o" \
+"CMakeFiles/PSUController.dir/features/BatteryUtils.cpp.o" \
+"CMakeFiles/PSUController.dir/features/Logger.cpp.o" \
+"CMakeFiles/PSUController.dir/utils/IPCHandler.cpp.o"
 
 # External object files for target PSUController
 PSUController_EXTERNAL_OBJECTS =
 
 PSUController: CMakeFiles/PSUController.dir/main.cpp.o
-PSUController: CMakeFiles/PSUController.dir/MCP4922.cpp.o
-PSUController: CMakeFiles/PSUController.dir/MCP3204.cpp.o
-PSUController: CMakeFiles/PSUController.dir/Converters.cpp.o
-PSUController: CMakeFiles/PSUController.dir/Controller.cpp.o
-PSUController: CMakeFiles/PSUController.dir/PersistentConfiguration.cpp.o
-PSUController: CMakeFiles/PSUController.dir/InputBoard.cpp.o
-PSUController: CMakeFiles/PSUController.dir/OutputBoard.cpp.o
-PSUController: CMakeFiles/PSUController.dir/BatteryUtils.cpp.o
-PSUController: CMakeFiles/PSUController.dir/Logger.cpp.o
-PSUController: CMakeFiles/PSUController.dir/Tester.cpp.o
+PSUController: CMakeFiles/PSUController.dir/utils/MCP4922.cpp.o
+PSUController: CMakeFiles/PSUController.dir/utils/MCP3204.cpp.o
+PSUController: CMakeFiles/PSUController.dir/io_abstraction/Converters.cpp.o
+PSUController: CMakeFiles/PSUController.dir/io_abstraction/PersistentConfiguration.cpp.o
+PSUController: CMakeFiles/PSUController.dir/io_abstraction/InputBoard.cpp.o
+PSUController: CMakeFiles/PSUController.dir/io_abstraction/OutputBoard.cpp.o
+PSUController: CMakeFiles/PSUController.dir/features/BatteryUtils.cpp.o
+PSUController: CMakeFiles/PSUController.dir/features/Logger.cpp.o
+PSUController: CMakeFiles/PSUController.dir/utils/IPCHandler.cpp.o
 PSUController: CMakeFiles/PSUController.dir/build.make
 PSUController: CMakeFiles/PSUController.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/home/marian/Documents/dev/Pi/PiSupply/Control&Interface/Control/src/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_12) "Linking CXX executable PSUController"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/home/marian/Documents/dev/Pi/PiSupply/Control&Interface/Control/src/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_11) "Linking CXX executable PSUController"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/PSUController.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

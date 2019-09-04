@@ -10,7 +10,7 @@ public:
     Controller();
     ~Controller();
 private:
-    void updateScreen(unsigned char* data);
+    void updateScreen(unsigned char* data, uint16_t totalSize);
 
     static void ipcHandler(Controller* parent);
 

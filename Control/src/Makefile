@@ -39,10 +39,10 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /usr/bin/cmake
+CMAKE_COMMAND = /home/marian/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/192.5728.100/bin/cmake/linux/bin/cmake
 
 # The command to remove a file.
-RM = /usr/bin/cmake -E remove -f
+RM = /home/marian/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/192.5728.100/bin/cmake/linux/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
@@ -59,7 +59,7 @@ CMAKE_BINARY_DIR = "/home/marian/Documents/dev/Pi/PiSupply/Control&Interface/Con
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/usr/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/home/marian/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/192.5728.100/bin/cmake/linux/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -70,7 +70,7 @@ rebuild_cache/fast: rebuild_cache
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
-	/usr/bin/cmake-gui -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/usr/bin/ccmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -123,275 +123,167 @@ PSUController/fast:
 	$(MAKE) -f CMakeFiles/PSUController.dir/build.make CMakeFiles/PSUController.dir/build
 .PHONY : PSUController/fast
 
-BatteryUtils.o: BatteryUtils.cpp.o
+features/BatteryUtils.o: features/BatteryUtils.cpp.o
 
-.PHONY : BatteryUtils.o
-
-# target to build an object file
-BatteryUtils.cpp.o:
-	$(MAKE) -f CMakeFiles/PSUController.dir/build.make CMakeFiles/PSUController.dir/BatteryUtils.cpp.o
-.PHONY : BatteryUtils.cpp.o
-
-BatteryUtils.i: BatteryUtils.cpp.i
-
-.PHONY : BatteryUtils.i
-
-# target to preprocess a source file
-BatteryUtils.cpp.i:
-	$(MAKE) -f CMakeFiles/PSUController.dir/build.make CMakeFiles/PSUController.dir/BatteryUtils.cpp.i
-.PHONY : BatteryUtils.cpp.i
-
-BatteryUtils.s: BatteryUtils.cpp.s
-
-.PHONY : BatteryUtils.s
-
-# target to generate assembly for a file
-BatteryUtils.cpp.s:
-	$(MAKE) -f CMakeFiles/PSUController.dir/build.make CMakeFiles/PSUController.dir/BatteryUtils.cpp.s
-.PHONY : BatteryUtils.cpp.s
-
-Controller.o: Controller.cpp.o
-
-.PHONY : Controller.o
+.PHONY : features/BatteryUtils.o
 
 # target to build an object file
-Controller.cpp.o:
-	$(MAKE) -f CMakeFiles/PSUController.dir/build.make CMakeFiles/PSUController.dir/Controller.cpp.o
-.PHONY : Controller.cpp.o
+features/BatteryUtils.cpp.o:
+	$(MAKE) -f CMakeFiles/PSUController.dir/build.make CMakeFiles/PSUController.dir/features/BatteryUtils.cpp.o
+.PHONY : features/BatteryUtils.cpp.o
 
-Controller.i: Controller.cpp.i
+features/BatteryUtils.i: features/BatteryUtils.cpp.i
 
-.PHONY : Controller.i
+.PHONY : features/BatteryUtils.i
 
 # target to preprocess a source file
-Controller.cpp.i:
-	$(MAKE) -f CMakeFiles/PSUController.dir/build.make CMakeFiles/PSUController.dir/Controller.cpp.i
-.PHONY : Controller.cpp.i
+features/BatteryUtils.cpp.i:
+	$(MAKE) -f CMakeFiles/PSUController.dir/build.make CMakeFiles/PSUController.dir/features/BatteryUtils.cpp.i
+.PHONY : features/BatteryUtils.cpp.i
 
-Controller.s: Controller.cpp.s
+features/BatteryUtils.s: features/BatteryUtils.cpp.s
 
-.PHONY : Controller.s
+.PHONY : features/BatteryUtils.s
 
 # target to generate assembly for a file
-Controller.cpp.s:
-	$(MAKE) -f CMakeFiles/PSUController.dir/build.make CMakeFiles/PSUController.dir/Controller.cpp.s
-.PHONY : Controller.cpp.s
+features/BatteryUtils.cpp.s:
+	$(MAKE) -f CMakeFiles/PSUController.dir/build.make CMakeFiles/PSUController.dir/features/BatteryUtils.cpp.s
+.PHONY : features/BatteryUtils.cpp.s
 
-Converters.o: Converters.cpp.o
+features/Logger.o: features/Logger.cpp.o
 
-.PHONY : Converters.o
+.PHONY : features/Logger.o
 
 # target to build an object file
-Converters.cpp.o:
-	$(MAKE) -f CMakeFiles/PSUController.dir/build.make CMakeFiles/PSUController.dir/Converters.cpp.o
-.PHONY : Converters.cpp.o
+features/Logger.cpp.o:
+	$(MAKE) -f CMakeFiles/PSUController.dir/build.make CMakeFiles/PSUController.dir/features/Logger.cpp.o
+.PHONY : features/Logger.cpp.o
 
-Converters.i: Converters.cpp.i
+features/Logger.i: features/Logger.cpp.i
 
-.PHONY : Converters.i
+.PHONY : features/Logger.i
 
 # target to preprocess a source file
-Converters.cpp.i:
-	$(MAKE) -f CMakeFiles/PSUController.dir/build.make CMakeFiles/PSUController.dir/Converters.cpp.i
-.PHONY : Converters.cpp.i
+features/Logger.cpp.i:
+	$(MAKE) -f CMakeFiles/PSUController.dir/build.make CMakeFiles/PSUController.dir/features/Logger.cpp.i
+.PHONY : features/Logger.cpp.i
 
-Converters.s: Converters.cpp.s
+features/Logger.s: features/Logger.cpp.s
 
-.PHONY : Converters.s
+.PHONY : features/Logger.s
 
 # target to generate assembly for a file
-Converters.cpp.s:
-	$(MAKE) -f CMakeFiles/PSUController.dir/build.make CMakeFiles/PSUController.dir/Converters.cpp.s
-.PHONY : Converters.cpp.s
+features/Logger.cpp.s:
+	$(MAKE) -f CMakeFiles/PSUController.dir/build.make CMakeFiles/PSUController.dir/features/Logger.cpp.s
+.PHONY : features/Logger.cpp.s
 
-InputBoard.o: InputBoard.cpp.o
+io_abstraction/Converters.o: io_abstraction/Converters.cpp.o
 
-.PHONY : InputBoard.o
+.PHONY : io_abstraction/Converters.o
 
 # target to build an object file
-InputBoard.cpp.o:
-	$(MAKE) -f CMakeFiles/PSUController.dir/build.make CMakeFiles/PSUController.dir/InputBoard.cpp.o
-.PHONY : InputBoard.cpp.o
+io_abstraction/Converters.cpp.o:
+	$(MAKE) -f CMakeFiles/PSUController.dir/build.make CMakeFiles/PSUController.dir/io_abstraction/Converters.cpp.o
+.PHONY : io_abstraction/Converters.cpp.o
 
-InputBoard.i: InputBoard.cpp.i
+io_abstraction/Converters.i: io_abstraction/Converters.cpp.i
 
-.PHONY : InputBoard.i
+.PHONY : io_abstraction/Converters.i
 
 # target to preprocess a source file
-InputBoard.cpp.i:
-	$(MAKE) -f CMakeFiles/PSUController.dir/build.make CMakeFiles/PSUController.dir/InputBoard.cpp.i
-.PHONY : InputBoard.cpp.i
+io_abstraction/Converters.cpp.i:
+	$(MAKE) -f CMakeFiles/PSUController.dir/build.make CMakeFiles/PSUController.dir/io_abstraction/Converters.cpp.i
+.PHONY : io_abstraction/Converters.cpp.i
 
-InputBoard.s: InputBoard.cpp.s
+io_abstraction/Converters.s: io_abstraction/Converters.cpp.s
 
-.PHONY : InputBoard.s
+.PHONY : io_abstraction/Converters.s
 
 # target to generate assembly for a file
-InputBoard.cpp.s:
-	$(MAKE) -f CMakeFiles/PSUController.dir/build.make CMakeFiles/PSUController.dir/InputBoard.cpp.s
-.PHONY : InputBoard.cpp.s
+io_abstraction/Converters.cpp.s:
+	$(MAKE) -f CMakeFiles/PSUController.dir/build.make CMakeFiles/PSUController.dir/io_abstraction/Converters.cpp.s
+.PHONY : io_abstraction/Converters.cpp.s
 
-Logger.o: Logger.cpp.o
+io_abstraction/InputBoard.o: io_abstraction/InputBoard.cpp.o
 
-.PHONY : Logger.o
+.PHONY : io_abstraction/InputBoard.o
 
 # target to build an object file
-Logger.cpp.o:
-	$(MAKE) -f CMakeFiles/PSUController.dir/build.make CMakeFiles/PSUController.dir/Logger.cpp.o
-.PHONY : Logger.cpp.o
+io_abstraction/InputBoard.cpp.o:
+	$(MAKE) -f CMakeFiles/PSUController.dir/build.make CMakeFiles/PSUController.dir/io_abstraction/InputBoard.cpp.o
+.PHONY : io_abstraction/InputBoard.cpp.o
 
-Logger.i: Logger.cpp.i
+io_abstraction/InputBoard.i: io_abstraction/InputBoard.cpp.i
 
-.PHONY : Logger.i
+.PHONY : io_abstraction/InputBoard.i
 
 # target to preprocess a source file
-Logger.cpp.i:
-	$(MAKE) -f CMakeFiles/PSUController.dir/build.make CMakeFiles/PSUController.dir/Logger.cpp.i
-.PHONY : Logger.cpp.i
+io_abstraction/InputBoard.cpp.i:
+	$(MAKE) -f CMakeFiles/PSUController.dir/build.make CMakeFiles/PSUController.dir/io_abstraction/InputBoard.cpp.i
+.PHONY : io_abstraction/InputBoard.cpp.i
 
-Logger.s: Logger.cpp.s
+io_abstraction/InputBoard.s: io_abstraction/InputBoard.cpp.s
 
-.PHONY : Logger.s
+.PHONY : io_abstraction/InputBoard.s
 
 # target to generate assembly for a file
-Logger.cpp.s:
-	$(MAKE) -f CMakeFiles/PSUController.dir/build.make CMakeFiles/PSUController.dir/Logger.cpp.s
-.PHONY : Logger.cpp.s
+io_abstraction/InputBoard.cpp.s:
+	$(MAKE) -f CMakeFiles/PSUController.dir/build.make CMakeFiles/PSUController.dir/io_abstraction/InputBoard.cpp.s
+.PHONY : io_abstraction/InputBoard.cpp.s
 
-MCP3204.o: MCP3204.cpp.o
+io_abstraction/OutputBoard.o: io_abstraction/OutputBoard.cpp.o
 
-.PHONY : MCP3204.o
+.PHONY : io_abstraction/OutputBoard.o
 
 # target to build an object file
-MCP3204.cpp.o:
-	$(MAKE) -f CMakeFiles/PSUController.dir/build.make CMakeFiles/PSUController.dir/MCP3204.cpp.o
-.PHONY : MCP3204.cpp.o
+io_abstraction/OutputBoard.cpp.o:
+	$(MAKE) -f CMakeFiles/PSUController.dir/build.make CMakeFiles/PSUController.dir/io_abstraction/OutputBoard.cpp.o
+.PHONY : io_abstraction/OutputBoard.cpp.o
 
-MCP3204.i: MCP3204.cpp.i
+io_abstraction/OutputBoard.i: io_abstraction/OutputBoard.cpp.i
 
-.PHONY : MCP3204.i
+.PHONY : io_abstraction/OutputBoard.i
 
 # target to preprocess a source file
-MCP3204.cpp.i:
-	$(MAKE) -f CMakeFiles/PSUController.dir/build.make CMakeFiles/PSUController.dir/MCP3204.cpp.i
-.PHONY : MCP3204.cpp.i
+io_abstraction/OutputBoard.cpp.i:
+	$(MAKE) -f CMakeFiles/PSUController.dir/build.make CMakeFiles/PSUController.dir/io_abstraction/OutputBoard.cpp.i
+.PHONY : io_abstraction/OutputBoard.cpp.i
 
-MCP3204.s: MCP3204.cpp.s
+io_abstraction/OutputBoard.s: io_abstraction/OutputBoard.cpp.s
 
-.PHONY : MCP3204.s
+.PHONY : io_abstraction/OutputBoard.s
 
 # target to generate assembly for a file
-MCP3204.cpp.s:
-	$(MAKE) -f CMakeFiles/PSUController.dir/build.make CMakeFiles/PSUController.dir/MCP3204.cpp.s
-.PHONY : MCP3204.cpp.s
+io_abstraction/OutputBoard.cpp.s:
+	$(MAKE) -f CMakeFiles/PSUController.dir/build.make CMakeFiles/PSUController.dir/io_abstraction/OutputBoard.cpp.s
+.PHONY : io_abstraction/OutputBoard.cpp.s
 
-MCP4922.o: MCP4922.cpp.o
+io_abstraction/PersistentConfiguration.o: io_abstraction/PersistentConfiguration.cpp.o
 
-.PHONY : MCP4922.o
+.PHONY : io_abstraction/PersistentConfiguration.o
 
 # target to build an object file
-MCP4922.cpp.o:
-	$(MAKE) -f CMakeFiles/PSUController.dir/build.make CMakeFiles/PSUController.dir/MCP4922.cpp.o
-.PHONY : MCP4922.cpp.o
+io_abstraction/PersistentConfiguration.cpp.o:
+	$(MAKE) -f CMakeFiles/PSUController.dir/build.make CMakeFiles/PSUController.dir/io_abstraction/PersistentConfiguration.cpp.o
+.PHONY : io_abstraction/PersistentConfiguration.cpp.o
 
-MCP4922.i: MCP4922.cpp.i
+io_abstraction/PersistentConfiguration.i: io_abstraction/PersistentConfiguration.cpp.i
 
-.PHONY : MCP4922.i
-
-# target to preprocess a source file
-MCP4922.cpp.i:
-	$(MAKE) -f CMakeFiles/PSUController.dir/build.make CMakeFiles/PSUController.dir/MCP4922.cpp.i
-.PHONY : MCP4922.cpp.i
-
-MCP4922.s: MCP4922.cpp.s
-
-.PHONY : MCP4922.s
-
-# target to generate assembly for a file
-MCP4922.cpp.s:
-	$(MAKE) -f CMakeFiles/PSUController.dir/build.make CMakeFiles/PSUController.dir/MCP4922.cpp.s
-.PHONY : MCP4922.cpp.s
-
-OutputBoard.o: OutputBoard.cpp.o
-
-.PHONY : OutputBoard.o
-
-# target to build an object file
-OutputBoard.cpp.o:
-	$(MAKE) -f CMakeFiles/PSUController.dir/build.make CMakeFiles/PSUController.dir/OutputBoard.cpp.o
-.PHONY : OutputBoard.cpp.o
-
-OutputBoard.i: OutputBoard.cpp.i
-
-.PHONY : OutputBoard.i
+.PHONY : io_abstraction/PersistentConfiguration.i
 
 # target to preprocess a source file
-OutputBoard.cpp.i:
-	$(MAKE) -f CMakeFiles/PSUController.dir/build.make CMakeFiles/PSUController.dir/OutputBoard.cpp.i
-.PHONY : OutputBoard.cpp.i
+io_abstraction/PersistentConfiguration.cpp.i:
+	$(MAKE) -f CMakeFiles/PSUController.dir/build.make CMakeFiles/PSUController.dir/io_abstraction/PersistentConfiguration.cpp.i
+.PHONY : io_abstraction/PersistentConfiguration.cpp.i
 
-OutputBoard.s: OutputBoard.cpp.s
+io_abstraction/PersistentConfiguration.s: io_abstraction/PersistentConfiguration.cpp.s
 
-.PHONY : OutputBoard.s
-
-# target to generate assembly for a file
-OutputBoard.cpp.s:
-	$(MAKE) -f CMakeFiles/PSUController.dir/build.make CMakeFiles/PSUController.dir/OutputBoard.cpp.s
-.PHONY : OutputBoard.cpp.s
-
-PersistentConfiguration.o: PersistentConfiguration.cpp.o
-
-.PHONY : PersistentConfiguration.o
-
-# target to build an object file
-PersistentConfiguration.cpp.o:
-	$(MAKE) -f CMakeFiles/PSUController.dir/build.make CMakeFiles/PSUController.dir/PersistentConfiguration.cpp.o
-.PHONY : PersistentConfiguration.cpp.o
-
-PersistentConfiguration.i: PersistentConfiguration.cpp.i
-
-.PHONY : PersistentConfiguration.i
-
-# target to preprocess a source file
-PersistentConfiguration.cpp.i:
-	$(MAKE) -f CMakeFiles/PSUController.dir/build.make CMakeFiles/PSUController.dir/PersistentConfiguration.cpp.i
-.PHONY : PersistentConfiguration.cpp.i
-
-PersistentConfiguration.s: PersistentConfiguration.cpp.s
-
-.PHONY : PersistentConfiguration.s
+.PHONY : io_abstraction/PersistentConfiguration.s
 
 # target to generate assembly for a file
-PersistentConfiguration.cpp.s:
-	$(MAKE) -f CMakeFiles/PSUController.dir/build.make CMakeFiles/PSUController.dir/PersistentConfiguration.cpp.s
-.PHONY : PersistentConfiguration.cpp.s
-
-Tester.o: Tester.cpp.o
-
-.PHONY : Tester.o
-
-# target to build an object file
-Tester.cpp.o:
-	$(MAKE) -f CMakeFiles/PSUController.dir/build.make CMakeFiles/PSUController.dir/Tester.cpp.o
-.PHONY : Tester.cpp.o
-
-Tester.i: Tester.cpp.i
-
-.PHONY : Tester.i
-
-# target to preprocess a source file
-Tester.cpp.i:
-	$(MAKE) -f CMakeFiles/PSUController.dir/build.make CMakeFiles/PSUController.dir/Tester.cpp.i
-.PHONY : Tester.cpp.i
-
-Tester.s: Tester.cpp.s
-
-.PHONY : Tester.s
-
-# target to generate assembly for a file
-Tester.cpp.s:
-	$(MAKE) -f CMakeFiles/PSUController.dir/build.make CMakeFiles/PSUController.dir/Tester.cpp.s
-.PHONY : Tester.cpp.s
+io_abstraction/PersistentConfiguration.cpp.s:
+	$(MAKE) -f CMakeFiles/PSUController.dir/build.make CMakeFiles/PSUController.dir/io_abstraction/PersistentConfiguration.cpp.s
+.PHONY : io_abstraction/PersistentConfiguration.cpp.s
 
 main.o: main.cpp.o
 
@@ -420,6 +312,87 @@ main.cpp.s:
 	$(MAKE) -f CMakeFiles/PSUController.dir/build.make CMakeFiles/PSUController.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+utils/IPCHandler.o: utils/IPCHandler.cpp.o
+
+.PHONY : utils/IPCHandler.o
+
+# target to build an object file
+utils/IPCHandler.cpp.o:
+	$(MAKE) -f CMakeFiles/PSUController.dir/build.make CMakeFiles/PSUController.dir/utils/IPCHandler.cpp.o
+.PHONY : utils/IPCHandler.cpp.o
+
+utils/IPCHandler.i: utils/IPCHandler.cpp.i
+
+.PHONY : utils/IPCHandler.i
+
+# target to preprocess a source file
+utils/IPCHandler.cpp.i:
+	$(MAKE) -f CMakeFiles/PSUController.dir/build.make CMakeFiles/PSUController.dir/utils/IPCHandler.cpp.i
+.PHONY : utils/IPCHandler.cpp.i
+
+utils/IPCHandler.s: utils/IPCHandler.cpp.s
+
+.PHONY : utils/IPCHandler.s
+
+# target to generate assembly for a file
+utils/IPCHandler.cpp.s:
+	$(MAKE) -f CMakeFiles/PSUController.dir/build.make CMakeFiles/PSUController.dir/utils/IPCHandler.cpp.s
+.PHONY : utils/IPCHandler.cpp.s
+
+utils/MCP3204.o: utils/MCP3204.cpp.o
+
+.PHONY : utils/MCP3204.o
+
+# target to build an object file
+utils/MCP3204.cpp.o:
+	$(MAKE) -f CMakeFiles/PSUController.dir/build.make CMakeFiles/PSUController.dir/utils/MCP3204.cpp.o
+.PHONY : utils/MCP3204.cpp.o
+
+utils/MCP3204.i: utils/MCP3204.cpp.i
+
+.PHONY : utils/MCP3204.i
+
+# target to preprocess a source file
+utils/MCP3204.cpp.i:
+	$(MAKE) -f CMakeFiles/PSUController.dir/build.make CMakeFiles/PSUController.dir/utils/MCP3204.cpp.i
+.PHONY : utils/MCP3204.cpp.i
+
+utils/MCP3204.s: utils/MCP3204.cpp.s
+
+.PHONY : utils/MCP3204.s
+
+# target to generate assembly for a file
+utils/MCP3204.cpp.s:
+	$(MAKE) -f CMakeFiles/PSUController.dir/build.make CMakeFiles/PSUController.dir/utils/MCP3204.cpp.s
+.PHONY : utils/MCP3204.cpp.s
+
+utils/MCP4922.o: utils/MCP4922.cpp.o
+
+.PHONY : utils/MCP4922.o
+
+# target to build an object file
+utils/MCP4922.cpp.o:
+	$(MAKE) -f CMakeFiles/PSUController.dir/build.make CMakeFiles/PSUController.dir/utils/MCP4922.cpp.o
+.PHONY : utils/MCP4922.cpp.o
+
+utils/MCP4922.i: utils/MCP4922.cpp.i
+
+.PHONY : utils/MCP4922.i
+
+# target to preprocess a source file
+utils/MCP4922.cpp.i:
+	$(MAKE) -f CMakeFiles/PSUController.dir/build.make CMakeFiles/PSUController.dir/utils/MCP4922.cpp.i
+.PHONY : utils/MCP4922.cpp.i
+
+utils/MCP4922.s: utils/MCP4922.cpp.s
+
+.PHONY : utils/MCP4922.s
+
+# target to generate assembly for a file
+utils/MCP4922.cpp.s:
+	$(MAKE) -f CMakeFiles/PSUController.dir/build.make CMakeFiles/PSUController.dir/utils/MCP4922.cpp.s
+.PHONY : utils/MCP4922.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -429,39 +402,36 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... PSUController"
 	@echo "... edit_cache"
-	@echo "... BatteryUtils.o"
-	@echo "... BatteryUtils.i"
-	@echo "... BatteryUtils.s"
-	@echo "... Controller.o"
-	@echo "... Controller.i"
-	@echo "... Controller.s"
-	@echo "... Converters.o"
-	@echo "... Converters.i"
-	@echo "... Converters.s"
-	@echo "... InputBoard.o"
-	@echo "... InputBoard.i"
-	@echo "... InputBoard.s"
-	@echo "... Logger.o"
-	@echo "... Logger.i"
-	@echo "... Logger.s"
-	@echo "... MCP3204.o"
-	@echo "... MCP3204.i"
-	@echo "... MCP3204.s"
-	@echo "... MCP4922.o"
-	@echo "... MCP4922.i"
-	@echo "... MCP4922.s"
-	@echo "... OutputBoard.o"
-	@echo "... OutputBoard.i"
-	@echo "... OutputBoard.s"
-	@echo "... PersistentConfiguration.o"
-	@echo "... PersistentConfiguration.i"
-	@echo "... PersistentConfiguration.s"
-	@echo "... Tester.o"
-	@echo "... Tester.i"
-	@echo "... Tester.s"
+	@echo "... features/BatteryUtils.o"
+	@echo "... features/BatteryUtils.i"
+	@echo "... features/BatteryUtils.s"
+	@echo "... features/Logger.o"
+	@echo "... features/Logger.i"
+	@echo "... features/Logger.s"
+	@echo "... io_abstraction/Converters.o"
+	@echo "... io_abstraction/Converters.i"
+	@echo "... io_abstraction/Converters.s"
+	@echo "... io_abstraction/InputBoard.o"
+	@echo "... io_abstraction/InputBoard.i"
+	@echo "... io_abstraction/InputBoard.s"
+	@echo "... io_abstraction/OutputBoard.o"
+	@echo "... io_abstraction/OutputBoard.i"
+	@echo "... io_abstraction/OutputBoard.s"
+	@echo "... io_abstraction/PersistentConfiguration.o"
+	@echo "... io_abstraction/PersistentConfiguration.i"
+	@echo "... io_abstraction/PersistentConfiguration.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... utils/IPCHandler.o"
+	@echo "... utils/IPCHandler.i"
+	@echo "... utils/IPCHandler.s"
+	@echo "... utils/MCP3204.o"
+	@echo "... utils/MCP3204.i"
+	@echo "... utils/MCP3204.s"
+	@echo "... utils/MCP4922.o"
+	@echo "... utils/MCP4922.i"
+	@echo "... utils/MCP4922.s"
 .PHONY : help
 
 

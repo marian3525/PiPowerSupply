@@ -18,6 +18,7 @@ public:
 
 private:
     Ui::MainWindow *ui;
+    Controller* controller;
 };
 
 #endif // MAINWINDOW_HPP

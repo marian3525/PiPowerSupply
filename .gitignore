@@ -4,6 +4,9 @@ bin
 *.log
 dist
 node_modules
+.vscode
+build-*
+*.cbp
 
 # Eclipse
 .classpath

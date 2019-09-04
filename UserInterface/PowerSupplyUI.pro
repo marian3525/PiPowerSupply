@@ -25,12 +25,14 @@ DEFINES += QT_DEPRECATED_WARNINGS
 CONFIG += c++11
 
 SOURCES += \
+    IPCHandler.cpp \
         main.cpp \
     Controller.cpp \
     MainWindow.cpp
 
 HEADERS += \
     Controller.hpp \
+    IPCHandler.h \
     MainWindow.hpp
 
 FORMS += \
